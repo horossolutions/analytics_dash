@@ -20,4 +20,5 @@ from tweet_dash import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.home, name='home'),
+    url(r'^tweet_dash/', views.tweet_dash, name='tweet_dash'),
 ]
