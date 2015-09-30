@@ -1,11 +1,112 @@
 {% extends 'base_template.html' %}
 
+{% block header_script %}
+
+{% endblock %}
+
 {% block content %}
 
-	<form action='/tweet_dash/' method='post'>
-		{% csrf_token %}
-		{{ form }}
-		<input type='submit' class='btn btn-default' value='Aceptar'/>
-	</form>
+<div class="container-full">
+
+      <div class="row">
+
+        <div class="col-lg-12 text-center v-center">
+
+          <h1>Analize el rendimiento de su cuenta Twitter</h1>
+          <p class="lead">Analize sus impresiones des Tweets, las visitas a su perfil, y el número de nuevos seguidores.</p>
+
+          <br><br><br>
+
+
+          <form action='/tweet_dash/' method='post' class='col-lg-12'>
+          	<div class="input-group" style="width:540px;text-align:center;margin:0 auto;">
+			{% csrf_token %}
+
+			  <input class="form-control input-lg" title="Don't worry. We hate spam, and will not share your email with anyone." placeholder="Ingrese el nombre de usuario de su cuenta  Twitter" type="text">
+
+
+
+			<span class='input-group-btn'>
+				<input type='submit' class='btn btn-lg btn-info' value='Aceptar'/>
+			</span>
+		    </div>
+		  </form>
+
+        </div>
+
+      </div> <!-- /row -->
+
+  	  <div class="row">
+
+        <div class="col-lg-12 text-center v-center" style="font-size:39pt;">
+          <a href="#"><i class="icon-google-plus"></i></a> <a href="#"><i class="icon-facebook"></i></a>  <a href="#"><i class="icon-twitter"></i></a> <a href="#"><i class="icon-github"></i></a> <a href="#"><i class="icon-pinterest"></i></a>
+        </div>
+
+      </div>
+
+  	<br><br><br><br><br>
+
+</div> <!-- /container full -->
+
+<div class="container">
+
+  	<hr>
+
+  	<div class="row">
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading"><h3>Something</h3></div>
+            <div class="panel-body">Some other thing.
+            </div>
+          </div>
+        </div>
+      	<div class="col-md-4">
+        	<div class="panel panel-default">
+            <div class="panel-heading"><h3>Hello.</h3></div>
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+            Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+            dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+            Aliquam in felis sit amet augue.
+            </div>
+          </div>
+        </div>
+      	<div class="col-md-4">
+        	<div class="panel panel-default">
+            <div class="panel-heading"><h3>Hello.</h3></div>
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+            Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+            dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+            Aliquam in felis sit amet augue.
+            </div>
+          </div>
+        </div>
+    </div>
+
+	<div class="row">
+        <div class="col-lg-12">
+        <br><br>
+          <p class="pull-right"><a href="http://www.bootply.com">Template from Bootply</a> &nbsp; ©Copyright 2013 ACME<sup>TM</sup> Brand.</p>
+        <br><br>
+        </div>
+    </div>
+</div>
+
+ 		<!--
+      <div class="inner cover">
+        <h1 class="cover-heading"></h1>
+
+        <p class="lead">Aumente el tráfico que su pagina web recibe de las redes sociales
+
+        <!--<small>    <br> <a href="http://bootsnipp.com/iframe/g6GWQ" target=
+              "_blank">Best viewed on full screen</a></small>-->
+		<!--
+        </p>
+
+        <p class="lead"><a class="btn btn-lg btn-info" href="#">Learn
+        more</a></p>
+
+      </div>-->
+
+
 
 {% endblock %}
